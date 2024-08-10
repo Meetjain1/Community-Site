@@ -409,6 +409,150 @@
     transition: background-color 0.3s, box-shadow 0.3s;
     z-index: 1000;
 }
+/* Container and Card Styling */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.card {
+  background: linear-gradient(white, #f5d244);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styling */
+.header h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contact-details div {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-details h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.contact-details p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content .left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.main-content .right {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.main-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  margin: 0 10px;
+}
+
+.icon i {
+  font-size: 2em;
+  color: #333;
+}
+
+.icon a:hover i {
+  color: #f5d244;
+}
+
+/* Form Styling */
+.form label {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.usersubmit input[type="submit"] {
+  background-color: #f5d244;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.usersubmit input[type="submit"]:hover {
+  background-color: #ffce54;
+}
+
+/* Dark Mode */
+body.dark-mode .card {
+  background: linear-gradient(rgb(36, 45, 57), rgb(16, 37, 60));
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .header h1,
+body.dark-mode .contact-details h3,
+body.dark-mode .contact-details p,
+body.dark-mode .form label {
+  color: #fff;
+}
+
+body.dark-mode .form input,
+body.dark-mode .form textarea {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .usersubmit input[type="submit"] {
+  background-color: #34495e;
+}
+
+body.dark-mode .icon i {
+  color: #ddd;
+}
+
+body.dark-mode .icon a:hover i {
+  color: #ffce54;
+}
+
     </style>
   </head>
   <body>
@@ -431,105 +575,105 @@
       });
     </script>
 
-    <a class="back-button" href="index.html">
-      <i class="fas fa-arrow-left"></i>
-    </a>
-    <div class="container">
-      <div class="card">
-        <div class="theme-toggle" id="theme-toggle">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </div>
-        <div class="header">
-          <h1>Contact Us</h1>
-        </div>
-        <div class="contact-details">
-          <div>
-            <h3>Email</h3>
-            <p>contact@yourcompany.com</p>
+<a class="back-button" href="index.html">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<div class="container">
+  <div class="card">
+    <div class="theme-toggle" id="theme-toggle">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </div>
+    <div class="header">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="contact-details">
+      <div>
+        <h3>Email</h3>
+        <p>contact@yourcompany.com</p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <p>(123) 456-7890</p>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <p>1234 Main St,<br />City, Country</p>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="left">
+        <img
+          src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp"
+          alt="Contact Image"
+        />
+        <div class="icons">
+          <div class="icon">
+            <a href="https://www.linkedin.com/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
           </div>
-          <div>
-            <h3>Phone</h3>
-            <p>(123) 456-7890</p>
+          <div class="icon">
+            <a href="https://github.com/" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
-          <div>
-            <h3>Address</h3>
-            <p>1234 Main St,<br />City, Country</p>
+          <div class="icon">
+            <a href="https://instagram.com/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
-        </div>
-        <div class="main-content">
-          <div class="left">
-            <img
-              src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp"
-              alt="Contact Image"
-            />
-            <div class="icons">
-              <div class="icon">
-                <a href="https://www.linkedin.com/" target="_blank"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-              </div>
-              <div class="icon">
-                <a href="https://github.com/" target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
-              <div class="icon">
-                <a href="https://instagram.com/" target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-              <div class="icon">
-                <a href="https://twitter.com/" target="_blank"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-              </div>
-              <div class="icon">
-                <a href="mailto:contact@yourcompany.com"
-                  ><i class="fas fa-envelope"></i
-                ></a>
-              </div>
-            </div>
+          <div class="icon">
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
           </div>
-          <div id="thankYouMessage">Thank you! Your message has been sent.</div>
-          <div id="errorMessage">Please fill out all fields.</div>
-      
-          <div class="right">
-              <h2>Get in Touch</h2>
-              <div class="form-container">
-                  <form id="contactForm" class="form" action="#" method="post">
-                      <label for="name">Name:</label>
-                      <input type="text" id="name" name="name" placeholder="Your name" required /><br />
-      
-                      <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" placeholder="Your email" required /><br />
-      
-                      <label for="phone">Phone:</label>
-                      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required /><br />
-      
-                      <label for="message">Message:</label>
-                      <textarea id="message" name="message" placeholder="Your message" required></textarea><br />
-      
-                      <div class="usersubmit">
-                          <input type="submit" value="Submit" />
-                      </div>
-                  </form>
-              </div>
-          </div>
-      
-          <div id="contactPopup" class="contact-popup" style="display: none;">
-              <div class="contact-popup-content">
-                  <h2>Thank you for contacting us!🧡</h2>
-                  <div class="contact-popup-icon">
-                      <img src="./images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
-                  </div>
-                  <p>Your message has been received.<br />We will get back to you shortly.</p>
-                  <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
-              </div>
+          <div class="icon">
+            <a href="mailto:contact@yourcompany.com">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
       </div>
+      <div id="thankYouMessage">Thank you! Your message has been sent.</div>
+      <div id="errorMessage">Please fill out all fields.</div>
+
+      <div class="right">
+        <h2>Get in Touch</h2>
+        <div class="form-container">
+          <form id="contactForm" class="form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required /><br />
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required /><br />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea><br />
+
+            <div class="usersubmit">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="contactPopup" class="contact-popup" style="display: none;">
+        <div class="contact-popup-content">
+          <h2>Thank you for contacting us! 🧡</h2>
+          <div class="contact-popup-icon">
+            <img src="./images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
+          </div>
+          <p>Your message has been received.<br />We will get back to you shortly.</p>
+          <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
     <script>
       document.getElementById('contactForm').addEventListener('submit', function (event) {
           event.preventDefault();
